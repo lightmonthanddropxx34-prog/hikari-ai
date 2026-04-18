@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # システム設定
-genai.configure(api_key="AQ.Ab8RN6Lgd4576wWOztx_samT60Lr fKP4D6fsET7zMFv5c8RaJQ")
+genai.configure(api_key="AQ.Ab8RN6Lgd4576wWOztx_samT60LrfKP4D6fsET7zMFv5c8RaJQ")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # アプリの見た目設定
