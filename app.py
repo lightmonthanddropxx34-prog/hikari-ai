@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # システム設定
 genai.configure(api_key="AIzaSyCInixR-c-RNV1coAz3r1JaQRdvpALUx6g")
-model = genai.GenerativeModel('gemini-2.0-flash-exp')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 # アプリの見た目設定
 st.set_page_config(page_title="秘書 AI 光", layout="centered")
