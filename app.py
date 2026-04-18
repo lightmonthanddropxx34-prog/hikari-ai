@@ -1,9 +1,9 @@
 import streamlit as st
 import google.generativeai as genai
 
-# システム設定
+# システム設定（最も確実なモデル指定に変更）
 genai.configure(api_key="AIzaSyCInixR-c-RNV1coAz3r1JaQRdvpALUx6g")
-model = genai.GenerativeModel('models/gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # アプリの見た目設定
 st.set_page_config(page_title="秘書 AI 光", layout="centered")
@@ -16,6 +16,7 @@ if "history" not in st.session_state:
 # 命令入力欄
 if prompt := st.chat_input("何かお手伝いしましょうか？"):
     st.session_state.history.append({"role": "user", "content": prompt})
+    # プロンプトに秘書としての役割を付与
     response = model.generate_content(f"あなたは秘書『光』です。知的に短く答えて。\nユーザー：{prompt}")
     st.session_state.history.append({"role": "assistant", "content": response.text})
 
