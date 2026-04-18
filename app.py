@@ -3,12 +3,12 @@ import google.generativeai as genai
 
 # システム設定
 genai.configure(api_key="AIzaSyCInixR-c-RNV1coAz3r1JaQRdvpALUx6g")
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.0-flash-exp')
+
 # アプリの見た目設定
 st.set_page_config(page_title="秘書 AI 光", layout="centered")
 st.title("📱 秘書 AI 『光』")
 
-                              
 # チャット履歴を保持
 if "history" not in st.session_state:
     st.session_state.history = []
