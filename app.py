@@ -9,6 +9,7 @@ model = genai.GenerativeModel('gemini-1.5-flash)
 st.set_page_config(page_title="秘書 AI 光", layout="centered")
 st.title("📱 秘書 AI 『光』")
 
+                              
 # チャット履歴を保持
 if "history" not in st.session_state:
     st.session_state.history = []
